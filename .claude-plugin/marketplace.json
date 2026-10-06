@@ -1,0 +1,13 @@
+{
+  "name": "receiptcal-plugins",
+  "owner": {
+    "name": "ReceiptCal"
+  },
+  "plugins": [
+    {
+      "name": "receiptcal",
+      "source": "./",
+      "description": "Connect ReceiptCal automatic food logging to your AI assistant with confirmed account actions."
+    }
+  ]
+}

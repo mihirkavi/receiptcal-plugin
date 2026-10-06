@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.env
+.env.*
+!.env.example
+.mcp.local.json
+*.tgz
+artifacts/
+.DS_Store

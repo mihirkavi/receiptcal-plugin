@@ -1,0 +1,17 @@
+{
+  "name": "receiptcal-plugins",
+  "plugins": [
+    {
+      "name": "receiptcal",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Health & Fitness"
+    }
+  ]
+}

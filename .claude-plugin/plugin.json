@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "receiptcal",
+  "description": "Connect ReceiptCal automatic food logging to your AI assistant with confirmed account actions.",
+  "version": "0.1.0",
+  "author": {
+    "name": "ReceiptCal"
+  },
+  "homepage": "https://receiptcal.com",
+  "repository": "https://github.com/mihirkavi/receiptcal-plugin",
+  "license": "MIT",
+  "keywords": [
+    "receiptcal",
+    "nutrition",
+    "receipts",
+    "meal-planning",
+    "mcp"
+  ]
+}

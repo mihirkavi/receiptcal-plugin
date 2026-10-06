@@ -1,0 +1,55 @@
+{
+  "name": "@receiptcal/mcp-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source MCP connector for ReceiptCal automatic food logging and confirmed account tools.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "receiptcal-mcp": "dist/src/stdio.js",
+    "receiptcal-auth": "dist/src/auth-cli.js"
+  },
+  "scripts": {
+    "auth": "node dist/src/auth-cli.js",
+    "build": "tsc -p tsconfig.json",
+    "configure:local": "tsx scripts/configure-local.ts",
+    "manifests:check": "tsx scripts/check-manifests.ts",
+    "start:stdio": "node dist/src/stdio.js",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "validate": "npm run typecheck && npm test && npm run build && npm run manifests:check"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "ajv": "8.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihirkavi/receiptcal-plugin.git"
+  },
+  "homepage": "https://github.com/mihirkavi/receiptcal-plugin",
+  "bugs": {
+    "url": "https://github.com/mihirkavi/receiptcal-plugin/issues"
+  },
+  "files": [
+    "dist/src/",
+    "skills/",
+    "assets/app-icon.png",
+    "plugin.json",
+    "mcp.json",
+    ".mcp.json",
+    ".codex-plugin/plugin.json",
+    ".claude-plugin/plugin.json",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ]
+}

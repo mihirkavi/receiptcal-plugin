@@ -1,0 +1,49 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "receiptcal",
+  "version": "0.1.0",
+  "description": "Connect ReceiptCal automatic food logging to your AI assistant with confirmed account actions.",
+  "author": {
+    "name": "ReceiptCal"
+  },
+  "homepage": "https://receiptcal.com",
+  "repository": "https://github.com/mihirkavi/receiptcal-plugin",
+  "license": "MIT",
+  "keywords": [
+    "receiptcal",
+    "mcp",
+    "receipts",
+    "nutrition"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ReceiptCal",
+        "shortDescription": "Receipts do the logging. Connect your account.",
+        "longDescription": "Read ReceiptCal food logs and prepare confirmed recipe, pantry, planning and support actions. Requires a ReceiptCal account; availability depends on the deployed service.",
+        "developerName": "ReceiptCal",
+        "category": "Health & Fitness",
+        "capabilities": [
+          "Read",
+          "Write",
+          "Nutrition",
+          "Meal planning",
+          "Pantry",
+          "Personalization",
+          "Food quality"
+        ],
+        "websiteURL": "https://receiptcal.com",
+        "privacyPolicyURL": "https://mcp.receiptcal.com/privacy",
+        "termsOfServiceURL": "https://mcp.receiptcal.com/terms",
+        "defaultPrompt": [
+          "Summarize my recent ReceiptCal meals.",
+          "Recommend a meal from my pantry.",
+          "Analyze this receipt with ReceiptCal."
+        ],
+        "brandColor": "#16845B",
+        "composerIcon": "./assets/app-icon.png",
+        "logo": "./assets/app-icon.png"
+      }
+    }
+  }
+}
