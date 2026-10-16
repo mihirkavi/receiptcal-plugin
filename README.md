@@ -4,6 +4,27 @@
 
 This is the MIT-licensed developer integration, not the ReceiptCal iOS/Android apps or hosted backend. It is distributed directly on GitHub and is **not an approved listing in the OpenAI plugin directory**. A GitHub release does not change host eligibility, approval requirements, service terms or account permissions. Hosted use requires a ReceiptCal account and a client that supports OAuth and Streamable HTTP MCP.
 
+## What's inside
+
+- An MCP server (TypeScript, `@modelcontextprotocol/sdk`) exposing ReceiptCal account tools, grouped roughly as:
+  - meals and nutrition: list meals, nutrition summaries, receipt text/file analysis, barcode and recognized-food logging
+  - pantry and planning: inventory intake and reconciliation, meal intentions, meal plans, grocery lists
+  - recipes and shopping handoffs: recommendations, recipe cards, recipe/ingredient cart URLs
+  - profile, food preferences, safety constraints, memories and onboarding
+  - support: customer report drafts and status
+  - `confirm_action` to commit a previously prepared write after explicit user approval
+- A `receiptcal` agent skill (`skills/receiptcal/SKILL.md`)
+- Plugin manifests for Codex (`plugin.json`, `.codex-plugin/`) and Claude Code (`.claude-plugin/`), plus `mcp.json`/`.mcp.json` pointing at the hosted endpoint
+- A local stdio connector (`receiptcal-mcp`) and an auth CLI (`receiptcal-auth`) for development
+
+```text
+src/        capabilities registry, MCP server, API client, auth CLI/store, stdio entry
+skills/     receiptcal agent skill
+scripts/    manifest checks and local configuration
+test/       node:test suites with synthetic data
+docs/       release standards
+```
+
 ## Connect to the hosted service
 
 MCP endpoint: `https://mcp.receiptcal.com/mcp`
