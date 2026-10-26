@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ReceiptCal plugin banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&family=Space+Mono:wght@400;700&display=block" rel="stylesheet">
+<style>
+  /* ReceiptCal plugin identity: the receiptcal.com design tokens (forest, leaf, mint, cream, paper)
+     with a developer twist: a thermal receipt whose line items are MCP tools. */
+  :root {
+    --bg: #f6f7f1; --ink: #051b14; --muted: #56675f; --line: rgba(16,35,27,.12);
+    --forest: #063022; --accent: #127a3d; --leaf: #24c96b; --mint: #caffdd; --paper: #fffef9; --paper-ink: #10231b; --paper-muted: #5d7067;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #032b20; --ink: #f5fff9; --muted: #a9c4b6; --line: rgba(202,255,221,.14);
+      --forest: #caffdd; --accent: #65e892; --leaf: #24c96b; --mint: #0a4a33;
+    }
+    body { background: radial-gradient(800px 600px at 80% 30%, #07543b, transparent 70%), var(--bg) !important; }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1600px; height: 600px; overflow: hidden; }
+  body {
+    background: radial-gradient(800px 600px at 82% 30%, #eaf1e8, transparent 70%), var(--bg);
+    color: var(--ink); font-family: "Nunito", ui-rounded, sans-serif;
+    display: grid; grid-template-columns: 840px 1fr; gap: 40px; padding: 0 90px 0 104px; align-items: center;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; font: 800 27px "Nunito"; letter-spacing: -0.02em; }
+  .brand img { width: 48px; height: 48px; border-radius: 13px; }
+  .brand span { font-weight: 700; color: var(--muted); }
+  .eyebrow { margin-top: 30px; font: 900 15px "Nunito"; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+  h1 { margin-top: 14px; font: 900 80px/1.0 "Nunito"; letter-spacing: -0.05em; color: var(--forest); }
+  h1 em { font-style: normal; color: var(--accent); }
+  .sub { margin-top: 24px; font: 600 23px/1.45 "Nunito"; color: var(--muted); max-width: 720px; }
+  .chips { margin-top: 26px; display: flex; gap: 10px; }
+  .chip { font: 800 16px "Nunito"; padding: 8px 16px; border-radius: 999px; background: var(--mint); color: var(--forest); }
+
+  /* Signature motif: a thermal receipt printed with tool calls, stamped "awaiting your OK" */
+  .rcpt-wrap { position: relative; justify-self: center; transform: rotate(2.2deg); }
+  .rcpt { width: 480px; background: var(--paper); color: var(--paper-ink); font: 400 15px/1.6 "Space Mono", monospace; padding: 28px 30px 22px; box-shadow: 0 28px 70px rgba(3,43,32,.22);
+    -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 18px 100%, linear-gradient(#000 0 0) top / 100% calc(100% - 9px) no-repeat; }
+  .rcpt .c { text-align: center; }
+  .rcpt .h { font-weight: 700; font-size: 19px; letter-spacing: .08em; }
+  .rcpt .m { color: var(--paper-muted); font-size: 13.5px; }
+  .rcpt hr { border: 0; border-top: 2px dashed #c9d2cb; margin: 12px 0; }
+  .li { display: flex; gap: 6px; }
+  .li .n { white-space: nowrap; }
+  .li .d { flex: 1; overflow: hidden; color: #b7c2ba; white-space: nowrap; }
+  .li .d::before { content: "........................................................"; }
+  .li .v { white-space: nowrap; font-weight: 700; }
+  .tot { font-weight: 700; font-size: 17px; }
+  .bars { margin-top: 12px; height: 38px; background: repeating-linear-gradient(90deg, var(--paper-ink) 0 2px, transparent 2px 5px, var(--paper-ink) 5px 6px, transparent 6px 10px, var(--paper-ink) 10px 13px, transparent 13px 15px); opacity: .85; }
+  .stamp { position: absolute; left: -70px; bottom: -44px; transform: rotate(-10deg); font: 900 22px/1.1 "Nunito"; letter-spacing: .06em; text-transform: uppercase; color: #127a3d; border: 4px solid #127a3d; border-radius: 14px; padding: 8px 14px; text-align: center; background: var(--paper); box-shadow: 0 10px 24px rgba(3,43,32,.18); }
+  .stamp small { display: block; font-size: 13px; letter-spacing: .14em; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="brand"><img src="../../../assets/app-icon.png" alt="">ReceiptCal <span>plugin</span></div>
+    <div class="eyebrow">Open-source MCP plugin</div>
+    <h1>Your food log,<br><em>in your AI assistant.</em></h1>
+    <p class="sub">Connect your own ReceiptCal account to Claude Code, Codex and other MCP clients. Read meals, plan recipes, approve every change.</p>
+    <div class="chips"><span class="chip">OAuth sign-in</span><span class="chip">Approve-first</span><span class="chip">MIT</span></div>
+  </div>
+  <div class="rcpt-wrap" aria-hidden="true">
+    <div class="rcpt">
+      <div class="c h">RECEIPTCAL · MCP</div>
+      <div class="c m">mcp.receiptcal.com/mcp</div>
+      <hr>
+      <div class="li"><span class="n">list_meals</span><span class="d"></span><span class="v">READ</span></div>
+      <div class="li"><span class="n">get_nutrition_summary</span><span class="d"></span><span class="v">READ</span></div>
+      <div class="li"><span class="n">get_use_soon_pantry</span><span class="d"></span><span class="v">READ</span></div>
+      <div class="li"><span class="n">prepare_create_meal_plan</span><span class="d"></span><span class="v">PREVIEW</span></div>
+      <div class="li"><span class="n">create_cart_url</span><span class="d"></span><span class="v">LINK</span></div>
+      <hr>
+      <div class="li tot"><span class="n">TOOLS IN SOURCE</span><span class="d"></span><span class="v">73</span></div>
+      <div class="li"><span class="n">PREPARE, THEN CONFIRM</span><span class="d"></span><span class="v">40</span></div>
+      <div class="li"><span class="n">PURCHASES MADE</span><span class="d"></span><span class="v">0</span></div>
+      <div class="bars"></div>
+    </div>
+    <div class="stamp">Awaiting<br>your OK<small>confirm_action</small></div>
+  </div>
+</body>
+</html>

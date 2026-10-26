@@ -21,10 +21,10 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-111111?style=flat-square"></a>
-  <img alt="Hosted MCP with OAuth sign-in" src="https://img.shields.io/badge/MCP%20%C2%B7%20OAuth-111111?style=flat-square">
-  <a href="https://github.com/mihirkavi/receiptcal-plugin/actions/workflows/validate.yml"><img alt="Validate workflow" src="https://img.shields.io/github/actions/workflow/status/mihirkavi/receiptcal-plugin/validate.yml?branch=main&style=flat-square&label=validate&color=111111"></a>
-  <img alt="Status: developer preview" src="https://img.shields.io/badge/status-developer%20preview-6b6b6b?style=flat-square">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-063022?style=flat-square"></a>
+  <img alt="Hosted MCP with OAuth sign-in" src="https://img.shields.io/badge/MCP%20%C2%B7%20OAuth-127A3D?style=flat-square">
+  <a href="https://github.com/mihirkavi/receiptcal-plugin/actions/workflows/validate.yml"><img alt="Validate workflow" src="https://img.shields.io/github/actions/workflow/status/mihirkavi/receiptcal-plugin/validate.yml?branch=main&style=flat-square&label=validate&color=127A3D"></a>
+  <img alt="Status: developer preview" src="https://img.shields.io/badge/status-developer%20preview-56675F?style=flat-square">
 </p>
 
 <p align="center">
